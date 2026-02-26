@@ -15,7 +15,7 @@ resource "docker_image" "nginx_image" {
     name = "nginx:latest"
 }
 
-resource "docker_container" "nginx_container" {
+resource "docker_container" "web-server-nginx" {
     image = docker_image.nginx_image.image_id
     name = "web-server-nginx"
 
